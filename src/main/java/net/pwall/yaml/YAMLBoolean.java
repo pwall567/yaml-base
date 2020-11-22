@@ -41,11 +41,22 @@ public class YAMLBoolean extends JSONBoolean implements YAMLScalar {
 
     private final String tag;
 
+    /**
+     * Construct a {@code YAMLBoolean} with the given value and tag.
+     *
+     * @param   value   the value
+     * @param   tag     the tag
+     */
     public YAMLBoolean(boolean value, String tag) {
         super(value);
         this.tag = tag;
     }
 
+    /**
+     * Construct a {@code YAMLBoolean} with the given value and the default tag.
+     *
+     * @param   value   the value
+     */
     public YAMLBoolean(boolean value) {
         this(value, defaultTag);
     }
@@ -66,6 +77,12 @@ public class YAMLBoolean extends JSONBoolean implements YAMLScalar {
         return super.hashCode() ^ tag.hashCode();
     }
 
+    /**
+     * Get a {@code YAMLBoolean} for the given value (avoid creating a new object).
+     *
+     * @param   b       the value
+     * @return          the corresponding {@code YAMLBoolean}
+     */
     public static YAMLBoolean valueOf(boolean b) {
         return b ? TRUE : FALSE;
     }

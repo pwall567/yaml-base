@@ -38,11 +38,22 @@ public class YAMLDecimal extends JSONDecimal implements YAMLScalar {
 
     private final String tag;
 
+    /**
+     * Construct a {@code YAMLDecimal} with the given value and tag.
+     *
+     * @param   value   the value
+     * @param   tag     the tag
+     */
     public YAMLDecimal(String value, String tag) {
         super(value);
         this.tag = tag;
     }
 
+    /**
+     * Construct a {@code YAMLDecimal} with the given value and the default tag.
+     *
+     * @param   value   the value
+     */
     public YAMLDecimal(String value) {
         this(value, defaultTag);
     }

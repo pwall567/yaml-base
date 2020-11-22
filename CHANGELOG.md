@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [ Unreleased]
+- `README.md`: added documentation
+- all classes: added JavaDoc
+
 ## [0.2] - 2020-11-05
 ### Added
 - `.travis.yml`: added

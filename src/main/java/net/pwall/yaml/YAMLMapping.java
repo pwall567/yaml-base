@@ -40,11 +40,22 @@ public class YAMLMapping extends JSONMapping<YAMLNode> implements YAMLNode {
 
     private final String tag;
 
+    /**
+     * Construct a {@code YAMLMapping} with the given {@link Map} and tag.
+     *
+     * @param   map     the map
+     * @param   tag     the tag
+     */
     public YAMLMapping(Map<String, YAMLNode> map, String tag) {
         super(map);
         this.tag = tag;
     }
 
+    /**
+     * Construct a {@code YAMLMapping} with the given {@link Map} and the default tag.
+     *
+     * @param   map     the map
+     */
     public YAMLMapping(Map<String, YAMLNode> map) {
         this(map, defaultTag);
     }

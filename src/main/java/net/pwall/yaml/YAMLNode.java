@@ -34,6 +34,11 @@ import net.pwall.json.JSONValue;
  */
 public interface YAMLNode extends JSONValue {
 
+    /**
+     * Get the tag of the node.
+     *
+     * @return  the tag
+     */
     String getTag();
 
 }

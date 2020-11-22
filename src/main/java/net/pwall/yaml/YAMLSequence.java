@@ -40,11 +40,22 @@ public class YAMLSequence extends JSONSequence<YAMLNode> implements YAMLNode {
 
     private final String tag;
 
+    /**
+     * Construct a {@code YAMLSequence} with the given {@link List} and tag.
+     *
+     * @param   list    the list
+     * @param   tag     the tag
+     */
     public YAMLSequence(List<YAMLNode> list, String tag) {
         super(list);
         this.tag = tag;
     }
 
+    /**
+     * Construct a {@code YAMLSequence} with the given {@link List} and the default tag.
+     *
+     * @param   list    the list
+     */
     public YAMLSequence(List<YAMLNode> list) {
         this(list, defaultTag);
     }

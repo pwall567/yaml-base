@@ -38,11 +38,22 @@ public class YAMLString extends JSONString implements YAMLScalar {
 
     private final String tag;
 
+    /**
+     * Construct a {@code YAMLString} with the given value and tag.
+     *
+     * @param   value   the value
+     * @param   tag     the tag
+     */
     public YAMLString(String value, String tag) {
         super(value);
         this.tag = tag;
     }
 
+    /**
+     * Construct a {@code YAMLString} with the given value and the default tag.
+     *
+     * @param   value   the value
+     */
     public YAMLString(String value) {
         this(value, defaultTag);
     }

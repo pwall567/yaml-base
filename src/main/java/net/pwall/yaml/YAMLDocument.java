@@ -25,31 +25,66 @@
 
 package net.pwall.yaml;
 
+/**
+ * A parsed YAML document.
+ *
+ * @author  Peter Wall
+ */
 public class YAMLDocument {
+
+    public static final int defaultMajorVersion = 1;
+    public static final int defaultMinorVersion = 2;
 
     private final YAMLNode rootNode;
     private final byte majorVersion;
     private final byte minorVersion;
 
+    /**
+     * Construct a {@code YAMLDocument} with the supplied root node, major version number and minor version number
+     *
+     * @param   rootNode        The root node
+     * @param   majorVersion    The major version number
+     * @param   minorVersion    The minor version number
+     */
     public YAMLDocument(YAMLNode rootNode, int majorVersion, int minorVersion) {
         this.rootNode = rootNode;
         this.majorVersion = (byte)majorVersion;
         this.minorVersion = (byte)minorVersion;
     }
 
+    /**
+     * Construct a {@code YAMLDocument} with the supplied root node and default version numbers
+     *
+     * @param   rootNode        The root node
+     */
     public YAMLDocument(YAMLNode rootNode) {
-        this(rootNode, 1, 2);
+        this(rootNode, defaultMajorVersion, defaultMinorVersion);
     }
 
+    /**
+     * Get the root node of the document.
+     *
+     * @return  the root node
+     */
     public YAMLNode getRootNode() {
         return rootNode;
     }
 
-    public byte getMajorVersion() {
+    /**
+     * Get the major version number.
+     *
+     * @return  the major version number
+     */
+    public int getMajorVersion() {
         return majorVersion;
     }
 
-    public byte getMinorVersion() {
+    /**
+     * Get the minor version number.
+     *
+     * @return  the minor version number
+     */
+    public int getMinorVersion() {
         return minorVersion;
     }
 

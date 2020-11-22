@@ -38,11 +38,22 @@ public class YAMLLong extends JSONLong implements YAMLScalar {
 
     private final String tag;
 
+    /**
+     * Construct a {@code YAMLLong} with the given value and tag.
+     *
+     * @param   value   the value
+     * @param   tag     the tag
+     */
     public YAMLLong(long value, String tag) {
         super(value);
         this.tag = tag;
     }
 
+    /**
+     * Construct a {@code YAMLLong} with the given value and the default tag.
+     *
+     * @param   value   the value
+     */
     public YAMLLong(long value) {
         this(value, defaultTag);
     }
