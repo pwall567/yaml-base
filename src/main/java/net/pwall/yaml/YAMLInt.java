@@ -34,6 +34,8 @@ import net.pwall.json.JSONInteger;
  */
 public class YAMLInt extends JSONInteger implements YAMLScalar {
 
+    private static final long serialVersionUID = 9000630769020293721L;
+
     public static final String defaultTag = "tag:yaml.org,2002:int";
 
     private final String tag;

@@ -36,6 +36,8 @@ import net.pwall.json.JSONMapping;
  */
 public class YAMLMapping extends JSONMapping<YAMLNode> implements YAMLNode {
 
+    private static final long serialVersionUID = -2760077219627606189L;
+
     public static final String defaultTag = "tag:yaml.org,2002:map";
 
     private final String tag;

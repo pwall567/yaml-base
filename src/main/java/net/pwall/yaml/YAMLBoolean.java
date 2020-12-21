@@ -34,6 +34,8 @@ import net.pwall.json.JSONBoolean;
  */
 public class YAMLBoolean extends JSONBoolean implements YAMLScalar {
 
+    private static final long serialVersionUID = -2111223940690561148L;
+
     public static final String defaultTag = "tag:yaml.org,2002:bool";
 
     public static final YAMLBoolean TRUE = new YAMLBoolean(true);

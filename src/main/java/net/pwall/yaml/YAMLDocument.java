@@ -25,12 +25,16 @@
 
 package net.pwall.yaml;
 
+import java.io.Serializable;
+
 /**
  * A parsed YAML document.
  *
  * @author  Peter Wall
  */
-public class YAMLDocument {
+public class YAMLDocument implements Serializable {
+
+    private static final long serialVersionUID = 4035759293402351891L;
 
     public static final int defaultMajorVersion = 1;
     public static final int defaultMinorVersion = 2;

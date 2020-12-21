@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [1.1] - 2020-12-21
+- `YAMLDocument`: added `Serializable`
+- several: added `serialVersionUID`
+
 ## [1.0] - 2020-11-22
 - `README.md`: added documentation
 - all classes: added JavaDoc

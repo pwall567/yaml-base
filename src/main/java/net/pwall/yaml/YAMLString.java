@@ -34,6 +34,8 @@ import net.pwall.json.JSONString;
  */
 public class YAMLString extends JSONString implements YAMLScalar {
 
+    private static final long serialVersionUID = 1375737380721054622L;
+
     public static final String defaultTag = "tag:yaml.org,2002:str";
 
     private final String tag;

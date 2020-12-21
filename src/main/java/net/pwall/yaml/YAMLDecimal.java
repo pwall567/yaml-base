@@ -34,6 +34,8 @@ import net.pwall.json.JSONDecimal;
  */
 public class YAMLDecimal extends JSONDecimal implements YAMLScalar {
 
+    private static final long serialVersionUID = 688937185264829851L;
+
     public static final String defaultTag = "tag:yaml.org,2002:float";
 
     private final String tag;

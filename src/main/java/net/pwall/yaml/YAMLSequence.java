@@ -36,6 +36,8 @@ import net.pwall.json.JSONSequence;
  */
 public class YAMLSequence extends JSONSequence<YAMLNode> implements YAMLNode {
 
+    private static final long serialVersionUID = -2320302886627418009L;
+
     public static final String defaultTag = "tag:yaml.org,2002:seq";
 
     private final String tag;
