@@ -44,8 +44,8 @@ public class YAMLMappingTest {
         map.put("key1", new YAMLString("value1"));
         map.put("key2", new YAMLInt(123));
         YAMLMapping yamlMapping1 = new YAMLMapping(map);
-        assertEquals("value1", ((YAMLString)yamlMapping1.get("key1")).get());
-        assertEquals(123, ((YAMLInt)yamlMapping1.get("key2")).get());
+        assertEquals("value1", ((YAMLString)yamlMapping1.get("key1")).getValue());
+        assertEquals(123, ((YAMLInt)yamlMapping1.get("key2")).getValue());
     }
 
     @Test
@@ -54,8 +54,8 @@ public class YAMLMappingTest {
         map.put("key1", new YAMLString("value1"));
         map.put("key2", new YAMLInt(123));
         YAMLMapping yamlMapping = new YAMLMapping(map);
-        assertEquals("value1", ((YAMLString)yamlMapping.get("key1")).get());
-        assertEquals(123, ((YAMLInt)yamlMapping.get("key2")).get());
+        assertEquals("value1", ((YAMLString)yamlMapping.get("key1")).getValue());
+        assertEquals(123, ((YAMLInt)yamlMapping.get("key2")).getValue());
         assertEquals(YAMLMapping.defaultTag, yamlMapping.getTag());
     }
 
@@ -66,8 +66,8 @@ public class YAMLMappingTest {
         map.put("key1", new YAMLString("value1"));
         map.put("key2", new YAMLInt(123));
         YAMLMapping yamlMapping = new YAMLMapping(map, customTag);
-        assertEquals("value1", ((YAMLString)yamlMapping.get("key1")).get());
-        assertEquals(123, ((YAMLInt)yamlMapping.get("key2")).get());
+        assertEquals("value1", ((YAMLString)yamlMapping.get("key1")).getValue());
+        assertEquals(123, ((YAMLInt)yamlMapping.get("key2")).getValue());
         assertEquals(customTag, yamlMapping.getTag());
     }
 

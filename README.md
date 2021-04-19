@@ -35,56 +35,56 @@ It extends `YAMLNode` and adds no additional methods.
 ### `YAMLString`
 
 `YAMLString` extends `JSONString` and implements `YAMLScalar`.
-The `JSONString.get()` function returns the value.
+The `JSONString.getValue()` function returns the value.
 
 Example:
 ```java
         YAMLString yamlString = new YAMLString("Hello!");
-        System.out.println(yamlString.get()); // prints Hello!
+        System.out.println(yamlString.getValue()); // prints Hello!
 ```
 
 ### `YAMLInt`
 
 `YAMLInt` extends `JSONInteger` and implements `YAMLScalar`.
-The `JSONInteger.get()` function returns the value.
+The `JSONInteger.getValue()` function returns the value.
 
 Example:
 ```java
         YAMLInt yamlInt = new YAMLInt(3 * 3 * 3);
-        System.out.println(yamlInt.get()); // prints 27
+        System.out.println(yamlInt.getValue()); // prints 27
 ```
 
 ### `YAMLLong`
 
 `YAMLLong` extends `JSONLong` and implements `YAMLScalar`.
-The `YAMLLong.get()` function returns the value.
+The `YAMLLong.getValue()` function returns the value.
 
 Example:
 ```java
         YAMLLong yamlLong = new YAMLLong(1234567812345678L);
-        System.out.println(yamlLong.get()); // prints 1234567812345678
+        System.out.println(yamlLong.getValue()); // prints 1234567812345678
 ```
 
 ### `YAMLDecimal`
 
 `YAMLDecimal` extends `JSONDecimal` and implements `YAMLScalar`.
-The `YAMLDecimal.get()` function returns the value.
+The `YAMLDecimal.getValue()` function returns the value.
 
 Example:
 ```java
         YAMLDecimal yamlDecimal = new YAMLDecimal(new BigDecimal("123.45"));
-        System.out.println(yamlDecimal.get()); // prints 123.45
+        System.out.println(yamlDecimal.getValue()); // prints 123.45
 ```
 
 ### `YAMLBoolean`
 
 `YAMLBoolean` extends `JSONBoolean` and implements `YAMLScalar`.
-The `YAMLBoolean.get()` function returns the value.
+The `YAMLBoolean.getValue()` function returns the value.
 
 Example:
 ```java
         YAMLBoolean yamlBoolean = YAMLBoolean.TRUE;
-        System.out.println(yamlBoolean.get()); // prints true
+        System.out.println(yamlBoolean.getValue()); // prints true
 ```
 
 ### `YAMLSequence`
@@ -133,25 +133,25 @@ Functions:
 
 ## Dependency Specification
 
-The latest version of the library is 1.1, and it may be obtained from the Maven Central repository.
+The latest version of the library is 1.2, and it may be obtained from the Maven Central repository.
 
 ### Maven
 ```xml
     <dependency>
       <groupId>net.pwall.yaml</groupId>
       <artifactId>yaml-base</artifactId>
-      <version>1.1</version>
+      <version>1.2</version>
     </dependency>
 ```
 ### Gradle
 ```groovy
-    testImplementation 'net.pwall.yaml:yaml-base:1.1'
+    testImplementation 'net.pwall.yaml:yaml-base:1.2'
 ```
 ### Gradle (kts)
 ```kotlin
-    testImplementation("net.pwall.yaml:yaml-base:1.1")
+    testImplementation("net.pwall.yaml:yaml-base:1.2")
 ```
 
 Peter Wall
 
-2020-12-21
+2021-04-20

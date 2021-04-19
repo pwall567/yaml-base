@@ -38,15 +38,15 @@ public class YAMLBooleanTest {
     @Test
     public void shouldCreateYAMLString() {
         YAMLBoolean yamlBoolean1 = new YAMLBoolean(true);
-        assertTrue(yamlBoolean1.get());
+        assertTrue(yamlBoolean1.getValue());
         YAMLBoolean yamlBoolean2 = new YAMLBoolean(false);
-        assertFalse(yamlBoolean2.get());
+        assertFalse(yamlBoolean2.getValue());
     }
 
     @Test
     public void shouldCreateYAMLStringWithDefaultTag() {
         YAMLBoolean yamlBoolean = new YAMLBoolean(true);
-        assertTrue(yamlBoolean.get());
+        assertTrue(yamlBoolean.getValue());
         assertEquals(YAMLBoolean.defaultTag, yamlBoolean.getTag());
     }
 
@@ -54,7 +54,7 @@ public class YAMLBooleanTest {
     public void shouldCreateYAMLStringWithCustomTag() {
         String customTag = "tag:yaml.pwall.net,2020:custom";
         YAMLBoolean yamlBoolean = new YAMLBoolean(true, customTag);
-        assertTrue(yamlBoolean.get());
+        assertTrue(yamlBoolean.getValue());
         assertEquals(customTag, yamlBoolean.getTag());
     }
 

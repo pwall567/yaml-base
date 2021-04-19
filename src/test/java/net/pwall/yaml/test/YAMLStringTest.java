@@ -35,15 +35,15 @@ public class YAMLStringTest {
     @Test
     public void shouldCreateYAMLString() {
         YAMLString yamlString1 = new YAMLString("hello");
-        assertEquals("hello", yamlString1.get());
+        assertEquals("hello", yamlString1.getValue());
         YAMLString yamlString2 = new YAMLString("A more exciting string!\n");
-        assertEquals("A more exciting string!\n", yamlString2.get());
+        assertEquals("A more exciting string!\n", yamlString2.getValue());
     }
 
     @Test
     public void shouldCreateYAMLStringWithDefaultTag() {
         YAMLString yamlString = new YAMLString("hello");
-        assertEquals("hello", yamlString.get());
+        assertEquals("hello", yamlString.getValue());
         assertEquals(YAMLString.defaultTag, yamlString.getTag());
     }
 
@@ -51,7 +51,7 @@ public class YAMLStringTest {
     public void shouldCreateYAMLStringWithCustomTag() {
         String customTag = "tag:yaml.pwall.net,2020:custom";
         YAMLString yamlString = new YAMLString("hello", customTag);
-        assertEquals("hello", yamlString.get());
+        assertEquals("hello", yamlString.getValue());
         assertEquals(customTag, yamlString.getTag());
     }
 

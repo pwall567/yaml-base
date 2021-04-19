@@ -37,15 +37,15 @@ public class YAMLDecimalTest {
     @Test
     public void shouldCreateYAMLDecimal() {
         YAMLDecimal yamlDecimal1 = new YAMLDecimal("1.23");
-        assertEquals(new BigDecimal("1.23"), yamlDecimal1.get());
+        assertEquals(new BigDecimal("1.23"), yamlDecimal1.getValue());
         YAMLDecimal yamlDecimal2 = new YAMLDecimal("1234567.999");
-        assertEquals(new BigDecimal("1234567.999"), yamlDecimal2.get());
+        assertEquals(new BigDecimal("1234567.999"), yamlDecimal2.getValue());
     }
 
     @Test
     public void shouldCreateYAMLDecimalWithDefaultTag() {
         YAMLDecimal yamlDecimal = new YAMLDecimal("1.23");
-        assertEquals(new BigDecimal("1.23"), yamlDecimal.get());
+        assertEquals(new BigDecimal("1.23"), yamlDecimal.getValue());
         assertEquals(YAMLDecimal.defaultTag, yamlDecimal.getTag());
     }
 
@@ -53,7 +53,7 @@ public class YAMLDecimalTest {
     public void shouldCreateYAMLDecimalWithCustomTag() {
         String customTag = "tag:yaml.pwall.net,2020:custom";
         YAMLDecimal yamlDecimal = new YAMLDecimal("1.23", customTag);
-        assertEquals(new BigDecimal("1.23"), yamlDecimal.get());
+        assertEquals(new BigDecimal("1.23"), yamlDecimal.getValue());
         assertEquals(customTag, yamlDecimal.getTag());
     }
 

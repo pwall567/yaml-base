@@ -35,15 +35,15 @@ public class YAMLIntTest {
     @Test
     public void shouldCreateYAMLInt() {
         YAMLInt yamlInt1 = new YAMLInt(12345);
-        assertEquals(12345, yamlInt1.get());
+        assertEquals(12345, yamlInt1.getValue());
         YAMLInt yamlInt2 = new YAMLInt(-888888888);
-        assertEquals(-888888888, yamlInt2.get());
+        assertEquals(-888888888, yamlInt2.getValue());
     }
 
     @Test
     public void shouldCreateYAMLIntWithDefaultTag() {
         YAMLInt yamlInt = new YAMLInt(12345);
-        assertEquals(12345, yamlInt.get());
+        assertEquals(12345, yamlInt.getValue());
         assertEquals(YAMLInt.defaultTag, yamlInt.getTag());
     }
 
@@ -51,7 +51,7 @@ public class YAMLIntTest {
     public void shouldCreateYAMLIntWithCustomTag() {
         String customTag = "tag:yaml.pwall.net,2020:custom";
         YAMLInt yamlInt = new YAMLInt(12345, customTag);
-        assertEquals(12345, yamlInt.get());
+        assertEquals(12345, yamlInt.getValue());
         assertEquals(customTag, yamlInt.getTag());
     }
 

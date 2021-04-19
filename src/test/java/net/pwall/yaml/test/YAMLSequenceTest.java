@@ -40,15 +40,15 @@ public class YAMLSequenceTest {
     @Test
     public void shouldCreateYAMLSequence() {
         YAMLSequence yamlSequence1 = new YAMLSequence(createList("hello", "world"));
-        assertEquals("hello", ((YAMLString)yamlSequence1.get(0)).get());
-        assertEquals("world", ((YAMLString)yamlSequence1.get(1)).get());
+        assertEquals("hello", ((YAMLString)yamlSequence1.get(0)).getValue());
+        assertEquals("world", ((YAMLString)yamlSequence1.get(1)).getValue());
     }
 
     @Test
     public void shouldCreateYAMLSequenceWithDefaultTag() {
         YAMLSequence yamlSequence = new YAMLSequence(createList("one", "two"));
-        assertEquals("one", ((YAMLString)yamlSequence.get(0)).get());
-        assertEquals("two", ((YAMLString)yamlSequence.get(1)).get());
+        assertEquals("one", ((YAMLString)yamlSequence.get(0)).getValue());
+        assertEquals("two", ((YAMLString)yamlSequence.get(1)).getValue());
         assertEquals(YAMLSequence.defaultTag, yamlSequence.getTag());
     }
 
@@ -56,8 +56,8 @@ public class YAMLSequenceTest {
     public void shouldCreateYAMLSequenceWithCustomTag() {
         String customTag = "tag:yaml.pwall.net,2020:custom";
         YAMLSequence yamlSequence = new YAMLSequence(createList("un", "deux"), customTag);
-        assertEquals("un", ((YAMLString)yamlSequence.get(0)).get());
-        assertEquals("deux", ((YAMLString)yamlSequence.get(1)).get());
+        assertEquals("un", ((YAMLString)yamlSequence.get(0)).getValue());
+        assertEquals("deux", ((YAMLString)yamlSequence.get(1)).getValue());
         assertEquals(customTag, yamlSequence.getTag());
     }
 

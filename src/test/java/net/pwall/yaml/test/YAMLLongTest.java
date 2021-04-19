@@ -35,15 +35,15 @@ public class YAMLLongTest {
     @Test
     public void shouldCreateYAMLLong() {
         YAMLLong yamlLong1 = new YAMLLong(12345L);
-        assertEquals(12345L, yamlLong1.get());
+        assertEquals(12345L, yamlLong1.getValue());
         YAMLLong yamlLong2 = new YAMLLong(-123456789123456789L);
-        assertEquals(-123456789123456789L, yamlLong2.get());
+        assertEquals(-123456789123456789L, yamlLong2.getValue());
     }
 
     @Test
     public void shouldCreateYAMLLongWithDefaultTag() {
         YAMLLong yamlLong = new YAMLLong(12345L);
-        assertEquals(12345L, yamlLong.get());
+        assertEquals(12345L, yamlLong.getValue());
         assertEquals(YAMLLong.defaultTag, yamlLong.getTag());
     }
 
@@ -51,7 +51,7 @@ public class YAMLLongTest {
     public void shouldCreateYAMLLongWithCustomTag() {
         String customTag = "tag:yaml.pwall.net,2020:custom";
         YAMLLong yamlLong = new YAMLLong(12345L, customTag);
-        assertEquals(12345L, yamlLong.get());
+        assertEquals(12345L, yamlLong.getValue());
         assertEquals(customTag, yamlLong.getTag());
     }
 
