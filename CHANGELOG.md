@@ -2,6 +2,9 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [1.3] - 2023-07-10
+- `pom.xml` - updated dependency versions
+
 ## [1.1] - 2020-12-21
 - `YAMLDocument`: added `Serializable`
 - several: added `serialVersionUID`

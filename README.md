@@ -133,25 +133,25 @@ Functions:
 
 ## Dependency Specification
 
-The latest version of the library is 1.2, and it may be obtained from the Maven Central repository.
+The latest version of the library is 1.3, and it may be obtained from the Maven Central repository.
 
 ### Maven
 ```xml
     <dependency>
       <groupId>net.pwall.yaml</groupId>
       <artifactId>yaml-base</artifactId>
-      <version>1.2</version>
+      <version>1.3</version>
     </dependency>
 ```
 ### Gradle
 ```groovy
-    testImplementation 'net.pwall.yaml:yaml-base:1.2'
+    testImplementation 'net.pwall.yaml:yaml-base:1.3'
 ```
 ### Gradle (kts)
 ```kotlin
-    testImplementation("net.pwall.yaml:yaml-base:1.2")
+    testImplementation("net.pwall.yaml:yaml-base:1.3")
 ```
 
 Peter Wall
 
-2021-04-20
+2023-07-10
